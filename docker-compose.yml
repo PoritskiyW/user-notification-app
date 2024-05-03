@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+
+  redis:
+    image: redis
+
+  gateway:
+    build: ./gateway-service
+    ports:
+      - "3000:3000"
+    depends_on:
+      - rabbitmq
+
+  user:
+    build: ./user-service
+    depends_on:
+      - rabbitmq
+      - postgres
+
+  scheduler:
+    build: ./schedule-service
+    depends_on:
+      - rabbitmq
+      - redis
+
+  notifier:
+    build: ./notification-service
+    depends_on:
+      - rabbitmq
