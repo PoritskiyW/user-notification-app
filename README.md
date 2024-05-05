@@ -22,6 +22,8 @@ Docker Compose
 
 ```bash
 $ git clone --recursive https://github.com/PoritskiyW/user-notification-app.git
+
+$ docker compose build
 ```
 
 # Running the app
