@@ -1,12 +1,16 @@
 [submodule "gateway-service"]
 	path = gateway-service
 	url = https://github.com/PoritskiyW/user-notification-app-gateway
+	branch=main
 [submodule "user-service"]
 	path = user-service
 	url = https://github.com/PoritskiyW/user-notification-app-user-service
+	branch=main
 [submodule "schedule-service"]
 	path = schedule-service
 	url = https://github.com/PoritskiyW/user-notification-app-schedule-service
+	branch=main
 [submodule "notification-service"]
 	path = notification-service
 	url = https://github.com/PoritskiyW/user-notification-app-notification-service
+	branch=main
