@@ -21,7 +21,7 @@ Docker Compose
 # Installation
 
 ```bash
-$ git clone --recursive [git@github.com:PoritskiyW/user-notification-app.git](https://github.com/PoritskiyW/user-notification-app.git)
+$ git clone --recursive https://github.com/PoritskiyW/user-notification-app.git
 ```
 
 # Running the app
